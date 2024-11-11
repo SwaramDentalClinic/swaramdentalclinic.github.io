@@ -1,0 +1,6 @@
+# Allow all search engine bots to crawl everything
+User-agent: *
+Disallow: 
+
+# Link to the sitemap
+Sitemap: https://swaramdentalclinic.github.io/sitemap.xml
