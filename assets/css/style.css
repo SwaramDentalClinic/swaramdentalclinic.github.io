@@ -1248,10 +1248,11 @@ My Code
   background-color: #f9f9f9;
   text-align: center;
   position: relative;
-  max-width: 100%;
+  width: 100%;
   margin: auto;
 }
 
+/* Heading Style */
 .review-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -1263,11 +1264,17 @@ My Code
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%; /* Ensure full width */
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
+  /* Ensure review cards are centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Review Card */
 .review-card {
   padding: 30px;
   margin: 0 10px;
@@ -1279,8 +1286,11 @@ My Code
   transition: transform 0.3s ease;
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box; /* To include padding in width */
+  flex-shrink: 0; /* Prevent shrinking when resizing */
 }
 
+/* Hover effect on card */
 .review-card:hover {
   transform: scale(1.05);
 }
@@ -1329,18 +1339,46 @@ My Code
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* For responsive design */
-@media (max-width: 768px) {
+/* Responsive design */
+
+/* Tablet screens (768px and above) */
+@media (max-width: 900px) {
+  .review-carousel {
+    width: 90%;  /* Make carousel take up most of the screen */
+  }
   .review-card {
-      max-width: 80%;
+    max-width: 80%;  /* Make cards a bit smaller for medium screens */
+    padding: 20px; /* Reduce padding */
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile screens (480px and above) */
+@media (max-width: 768px) {
+  .review-carousel {
+    width: 95%;  /* Make carousel almost full width */
+  }
   .review-card {
-      max-width: 90%;
+    max-width: 90%; /* Increase card width for mobile */
+    padding: 15px; /* Further reduce padding */
+  }
+  .prev-btn, .next-btn {
+    font-size: 20px;  /* Reduce button size for mobile */
+    padding: 8px;  /* Reduce button padding */
   }
 }
+
+/* Small mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .review-card {
+    max-width: 100%;  /* Full width on very small screens */
+    padding: 10px;  /* Further reduce padding */
+  }
+  .prev-btn, .next-btn {
+    font-size: 18px;  /* Further reduce button size */
+    padding: 6px;  /* Further reduce button padding */
+  }
+}
+
 
 
 
