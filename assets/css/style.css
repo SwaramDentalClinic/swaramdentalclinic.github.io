@@ -1243,12 +1243,13 @@ My Code
 */
 
 /* Scoped Styles for Review Section */
+/* Review Section */
 .review-section {
   padding: 50px;
   background-color: #f9f9f9;
   text-align: center;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -1264,14 +1265,10 @@ My Code
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ensure full width */
+  width: 100%; /* Ensure full width of the carousel container */
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  /* Ensure review cards are centered */
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Review Card */
@@ -1286,7 +1283,7 @@ My Code
   transition: transform 0.3s ease;
   width: 100%;
   max-width: 400px;
-  box-sizing: border-box; /* To include padding in width */
+  box-sizing: border-box; /* To ensure padding is included in the width */
   flex-shrink: 0; /* Prevent shrinking when resizing */
 }
 
@@ -1339,43 +1336,60 @@ My Code
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Responsive design */
+/* Media Queries */
 
-/* Tablet screens (768px and above) */
-@media (max-width: 900px) {
+/* Desktop screens (> 900px) */
+@media (min-width: 901px) {
   .review-carousel {
-    width: 90%;  /* Make carousel take up most of the screen */
+    width: 80%;  /* Use 80% of the screen width */
   }
   .review-card {
-    max-width: 80%;  /* Make cards a bit smaller for medium screens */
-    padding: 20px; /* Reduce padding */
+    max-width: 400px;  /* Keep the card size at max 400px */
   }
 }
 
-/* Mobile screens (480px and above) */
-@media (max-width: 768px) {
+/* Tablet screens (768px - 900px) */
+@media (max-width: 900px) and (min-width: 768px) {
   .review-carousel {
-    width: 95%;  /* Make carousel almost full width */
+    width: 90%;  /* Take up 90% of screen width */
   }
   .review-card {
-    max-width: 90%; /* Increase card width for mobile */
-    padding: 15px; /* Further reduce padding */
+    max-width: 350px;  /* Reduce max-width for tablets */
+    padding: 20px; /* Reduce padding */
   }
   .prev-btn, .next-btn {
-    font-size: 20px;  /* Reduce button size for mobile */
-    padding: 8px;  /* Reduce button padding */
+    font-size: 20px;  /* Smaller button size */
+    padding: 8px;
+  }
+}
+
+/* Mobile screens (480px - 768px) */
+@media (max-width: 768px) and (min-width: 480px) {
+  .review-carousel {
+    width: 95%;  /* Use more screen space for smaller tablets and larger phones */
+  }
+  .review-card {
+    max-width: 300px;  /* Make cards smaller */
+    padding: 15px;  /* Reduce padding */
+  }
+  .prev-btn, .next-btn {
+    font-size: 18px;  /* Smaller button size */
+    padding: 8px;
   }
 }
 
 /* Small mobile screens (up to 480px) */
 @media (max-width: 480px) {
+  .review-carousel {
+    width: 100%;  /* Use full screen width */
+  }
   .review-card {
-    max-width: 100%;  /* Full width on very small screens */
+    max-width: 90%;  /* Full width card for small screens */
     padding: 10px;  /* Further reduce padding */
   }
   .prev-btn, .next-btn {
-    font-size: 18px;  /* Further reduce button size */
-    padding: 6px;  /* Further reduce button padding */
+    font-size: 16px;  /* Reduce button size further */
+    padding: 6px;  /* Smaller button size */
   }
 }
 
