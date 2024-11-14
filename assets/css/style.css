@@ -1235,6 +1235,119 @@ iframe {
   .blog-list { grid-template-columns: repeat(3, 1fr); }
 
 
+  /* =========================================================================================================================================== */
+
+/* 
+
+My Code
+*/
+
+/* Scoped Styles for Review Section */
+.review-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.review-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Review Carousel */
+.review-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.review-card {
+  padding: 30px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+/* Review Text */
+.review-author {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.review-rating {
+  color: #ffb400;
+  margin: 5px 0;
+}
+
+.review-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Previous & Next Buttons */
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+  .review-card {
+      max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+      max-width: 90%;
+  }
+}
+
+
+
+
+
+/* ================================================================================================================================================== */
+
 
   /**
    * FOOTER
