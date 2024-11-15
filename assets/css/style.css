@@ -1244,129 +1244,152 @@ My Code
 /* Review Section Styling */
 /* Scoped Styles for Review Section */
 .review-section {
-    padding: 50px;
-    background-color: #f9f9f9;
-    text-align: center;
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
 }
 
+/* Heading Style */
 .review-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-/* Review Carousel Container */
-.review-section .review-carousel {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-/* Review Wrapper */
-.review-section .review-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
-    flex-wrap: nowrap; /* Ensures reviews stay in one row */
+/* Review Carousel */
+.review-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure full width of the carousel container */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Review Card */
-.review-section .review-card {
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 0 10px;
-    opacity: 0.9;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 300px; /* Card size (increased size) */
-    height: 400px; /* Card height */
+.review-card {
+  padding: 30px;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box; /* To ensure padding is included in the width */
+  flex-shrink: 0; /* Prevent shrinking when resizing */
 }
 
-/* Review Layout */
-.review-section .review {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    cursor: pointer;
-    height: 100%; /* Full height of the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Hover effect on card */
+.review-card:hover {
+  transform: scale(1.05);
 }
 
-/* Hover Effect (focus) */
-.review-section .review:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+/* Review Text */
+.review-author {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Author Style */
-.review-section .review-author {
-    font-size: 18px;
-    font-weight: bold;
+.review-rating {
+  color: #ffb400;
+  margin: 5px 0;
 }
 
-.review-section .review-rating {
-    color: #ffb400;
-    margin: 5px 0;
+.review-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
 }
 
-.review-section .review-text {
-    font-size: 16px;
-    color: #555;
-    margin-top: 10px;
+/* Previous & Next Buttons */
+.prev-btn, .next-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
-/* Carousel Navigation Buttons */
-.review-section button.prev, .review-section button.next {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 18px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    opacity: 0.7;
+.prev-btn {
+  left: 10px;
 }
 
-.review-section button.prev {
-    left: 10px;
+.next-btn {
+  right: 10px;
 }
 
-.review-section button.next {
-    right: 10px;
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.review-section button:hover {
-    background-color: #0056b3;
-    opacity: 1;
+/* Media Queries */
+
+/* Desktop screens (> 900px) */
+@media (min-width: 901px) {
+  .review-carousel {
+    width: 80%;  /* Use 80% of the screen width */
+  }
+  .review-card {
+    max-width: 400px;  /* Keep the card size at max 400px */
+  }
 }
 
-/* Responsive Design for Larger Screens */
-@media only screen and (min-width: 768px) {
-    .review-section .review-card {
-        width: 300px; /* Fixed card width */
-    }
+/* Tablet screens (768px - 900px) */
+@media (max-width: 900px) and (min-width: 768px) {
+  .review-carousel {
+    width: 90%;  /* Take up 90% of screen width */
+  }
+  .review-card {
+    max-width: 350px;  /* Reduce max-width for tablets */
+    padding: 20px; /* Reduce padding */
+  }
+  .prev-btn, .next-btn {
+    font-size: 20px;  /* Smaller button size */
+    padding: 8px;
+  }
 }
 
-/* Responsive Design for Smaller Screens (Tablet & Mobile) */
-@media only screen and (max-width: 768px) {
-    .review-section .review-card {
-        width: 45%; /* 2 reviews at a time for medium screens */
-    }
+/* Mobile screens (480px - 768px) */
+@media (max-width: 768px) and (min-width: 480px) {
+  .review-carousel {
+    width: 95%;  /* Use more screen space for smaller tablets and larger phones */
+  }
+  .review-card {
+    max-width: 300px;  /* Make cards smaller */
+    padding: 15px;  /* Reduce padding */
+  }
+  .prev-btn, .next-btn {
+    font-size: 18px;  /* Smaller button size */
+    padding: 8px;
+  }
 }
 
-@media only screen and (max-width: 480px) {
-    .review-section .review-card {
-        width: 90%; /* 1 review at a time for smaller mobile screens */
-    }
+/* Small mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .review-carousel {
+    width: 100%;  /* Use full screen width */
+  }
+  .review-card {
+    max-width: 90%;  /* Full width card for small screens */
+    padding: 10px;  /* Further reduce padding */
+  }
+  .prev-btn, .next-btn {
+    font-size: 16px;  /* Reduce button size further */
+    padding: 6px;  /* Smaller button size */
+  }
 }
 
 
