@@ -1235,12 +1235,25 @@ iframe {
   .blog-list { grid-template-columns: repeat(3, 1fr); }
 
 
-  /* =========================================================================================================================================== */
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container { grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; }
+
+}
+
+
+/* =========================================================================================================================================== */
 
 /* 
 
 My Code
 */
+
+/* Scoped Styles for Review Section */
+/* Review Section */
 .review-section {
   padding: 50px 20px;  /* Add padding on sides to prevent edge-to-edge touch */
   background-color: #f9f9f9;
@@ -1397,19 +1410,6 @@ My Code
 
 
 /* ================================================================================================================================================== */
-
-
-  /**
-   * FOOTER
-   */
-
-  .footer-top .container { grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr; }
-
-}
-
-
-
-
 
 /**
  * responsive for larger than 1200px screen
