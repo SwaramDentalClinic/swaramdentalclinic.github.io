@@ -1241,8 +1241,6 @@ iframe {
 
 My Code
 */
-
-/* Review Section Styling */
 /* Review Section Styling */
 .review-section {
   padding: 50px 20px;
@@ -1266,10 +1264,11 @@ My Code
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  max-width: 700px; /* Sets the max width for the carousel */
   width: 100%;
-  max-width: 700px; /* Controls max width for center alignment */
+  gap: 10px; /* Adds space between the card and the navigation buttons */
   padding: 20px 0;
+  position: relative;
 }
 
 /* Review Card */
@@ -1281,6 +1280,7 @@ My Code
   text-align: left;
   max-width: 100%;
   box-sizing: border-box;
+  flex: 1; /* Ensures the card takes up space between buttons */
 }
 
 /* Author and Rating */
@@ -1309,19 +1309,12 @@ My Code
   border: none;
   padding: 10px;
   cursor: pointer;
-  position: relative;
-  top: 0; /* Ensures buttons remain in line with card */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.prev-btn {
-  margin-right: 10px;
-}
-
-.next-btn {
-  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .prev-btn:hover, .next-btn:hover {
@@ -1357,7 +1350,6 @@ My Code
     padding: 20px;
   }
 }
-
 
 
 /* ================================================================================================================================================== */
