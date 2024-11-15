@@ -1242,13 +1242,13 @@ iframe {
 My Code
 */
 .review-section {
-  padding: 50px 20px;  /* Add padding on sides to prevent edge-to-edge touch */
+  padding: 50px 20px;
   background-color: #f9f9f9;
   text-align: center;
   position: relative;
   max-width: 100%;
   margin: auto;
-  margin-top: 80px;  /* Add space at the top */
+  margin-top: 80px; /* Adds space between sections */
 }
 
 /* Heading Style */
@@ -1267,8 +1267,7 @@ My Code
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  max-width: 100%;  /* Ensure the container does not overflow */
-  gap: 20px;  /* Space between cards */
+  gap: 20px;
 }
 
 /* Review Card */
@@ -1280,11 +1279,11 @@ My Code
   text-align: left;
   opacity: 0.9;
   transition: transform 0.3s ease;
-  width: 100%;
+  width: 90%; /* Adjust width to help center on smaller screens */
   max-width: 400px;
-  box-sizing: border-box;  /* To ensure padding is included in the width */
-  flex-shrink: 0;  /* Prevent shrinking when resizing */
-  margin: auto;  /* Centering the card within its container */
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: auto;
 }
 
 /* Hover effect on card */
@@ -1320,16 +1319,16 @@ My Code
   cursor: pointer;
   position: absolute;
   top: 50%;
-  z-index: 1;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .prev-btn {
-  left: 10px;
+  left: -40px; /* Move buttons closer to the card */
 }
 
 .next-btn {
-  right: 10px;
+  right: -40px; /* Move buttons closer to the card */
 }
 
 .prev-btn:hover, .next-btn:hover {
@@ -1341,58 +1340,65 @@ My Code
 /* Desktop screens (> 900px) */
 @media (min-width: 901px) {
   .review-carousel {
-    width: 80%;  /* Use 80% of the screen width */
+    width: 80%;
   }
   .review-card {
-    max-width: 400px;  /* Keep the card size at max 400px */
+    max-width: 400px;
   }
 }
 
 /* Tablet screens (768px - 900px) */
 @media (max-width: 900px) and (min-width: 768px) {
   .review-carousel {
-    width: 90%;  /* Take up 90% of screen width */
+    width: 90%;
   }
   .review-card {
-    max-width: 350px;  /* Reduce max-width for tablets */
-    padding: 20px; /* Reduce padding */
+    max-width: 350px;
+    padding: 20px;
   }
   .prev-btn, .next-btn {
-    font-size: 20px;  /* Smaller button size */
+    font-size: 20px;
     padding: 8px;
+    left: 10px;
+    right: 10px;
   }
 }
 
 /* Mobile screens (480px - 768px) */
 @media (max-width: 768px) and (min-width: 480px) {
   .review-carousel {
-    width: 95%;  /* Use more screen space for smaller tablets and larger phones */
+    width: 95%;
   }
   .review-card {
-    max-width: 300px;  /* Make cards smaller */
-    padding: 15px;  /* Reduce padding */
+    max-width: 300px;
+    padding: 15px;
   }
   .prev-btn, .next-btn {
-    font-size: 18px;  /* Smaller button size */
+    font-size: 18px;
     padding: 8px;
+    left: 5px;
+    right: 5px;
   }
 }
 
 /* Small mobile screens (up to 480px) */
 @media (max-width: 480px) {
   .review-carousel {
-    width: 100%;  /* Use full screen width */
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
   .review-card {
-    max-width: 90%;  /* Full width card for small screens */
-    padding: 10px;  /* Further reduce padding */
+    max-width: 90%;
+    padding: 10px;
   }
   .prev-btn, .next-btn {
-    font-size: 16px;  /* Reduce button size further */
-    padding: 6px;  /* Smaller button size */
+    font-size: 16px;
+    padding: 6px;
+    left: 10px;
+    right: 10px;
   }
 }
-
 
 
 /* ================================================================================================================================================== */
