@@ -1243,10 +1243,11 @@ My Code
 */
 
 /* Review Section Styling */
+/* Review Section Styling */
 .review-section {
   padding: 50px 20px;
   background-color: #f9f9f9;
-  margin-top: 80px; /* Adds space between sections */
+  margin-top: 80px; /* Adds gap between previous section and review section */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1267,9 +1268,8 @@ My Code
   justify-content: center;
   position: relative;
   width: 100%;
-  max-width: 600px; /* Adjust to center the carousel */
+  max-width: 700px; /* Controls max width for center alignment */
   padding: 20px 0;
-  gap: 20px;
 }
 
 /* Review Card */
@@ -1281,7 +1281,6 @@ My Code
   text-align: left;
   max-width: 100%;
   box-sizing: border-box;
-  margin: auto;
 }
 
 /* Author and Rating */
@@ -1310,17 +1309,19 @@ My Code
   border: none;
   padding: 10px;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  top: 0; /* Ensures buttons remain in line with card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .prev-btn {
-  left: -60px; /* Move closer to card */
+  margin-right: 10px;
 }
 
 .next-btn {
-  right: -60px; /* Move closer to card */
+  margin-left: 10px;
 }
 
 .prev-btn:hover, .next-btn:hover {
@@ -1334,11 +1335,6 @@ My Code
   .review-card {
     max-width: 500px;
   }
-  .prev-btn, .next-btn {
-    font-size: 24px;
-    left: -80px;
-    right: -80px;
-  }
 }
 
 /* Tablet screens (768px - 900px) */
@@ -1346,36 +1342,19 @@ My Code
   .review-card {
     max-width: 450px;
   }
-  .prev-btn, .next-btn {
-    font-size: 20px;
-    left: -40px;
-    right: -40px;
-  }
 }
 
-/* Mobile screens (480px - 768px) */
-@media (max-width: 768px) and (min-width: 480px) {
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+  .review-carousel {
+    flex-direction: column;
+  }
+  .prev-btn, .next-btn {
+    font-size: 20px;
+  }
   .review-card {
     max-width: 90%;
     padding: 20px;
-  }
-  .prev-btn, .next-btn {
-    font-size: 18px;
-    left: 5px;
-    right: 5px;
-  }
-}
-
-/* Small mobile screens (up to 480px) */
-@media (max-width: 480px) {
-  .review-card {
-    max-width: 90%;
-    padding: 15px;
-  }
-  .prev-btn, .next-btn {
-    font-size: 16px;
-    left: 5px;
-    right: 5px;
   }
 }
 
