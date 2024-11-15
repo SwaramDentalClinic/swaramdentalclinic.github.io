@@ -1242,57 +1242,49 @@ iframe {
 My Code
 */
 
+/* Review Section Styling */
 .review-section {
   padding: 50px 20px;
   background-color: #f9f9f9;
-  text-align: center;
-  position: relative;
-  max-width: 100%;
-  margin: auto;
   margin-top: 80px; /* Adds space between sections */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Heading Style */
+/* Section Heading */
 .review-section h2 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #333;
+  text-align: center;
 }
 
-/* Review Carousel */
+/* Carousel Wrapper */
 .review-carousel {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+  justify-content: center;
   position: relative;
+  width: 100%;
+  max-width: 600px; /* Adjust to center the carousel */
+  padding: 20px 0;
   gap: 20px;
 }
 
 /* Review Card */
 .review-card {
-  padding: 30px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   text-align: left;
-  opacity: 0.9;
-  transition: transform 0.3s ease;
-  width: 90%; /* Adjust width to help center on smaller screens */
-  max-width: 400px;
+  max-width: 100%;
   box-sizing: border-box;
-  flex-shrink: 0;
   margin: auto;
 }
 
-/* Hover effect on card */
-.review-card:hover {
-  transform: scale(1.05);
-}
-
-/* Review Text */
+/* Author and Rating */
 .review-author {
   font-size: 18px;
   font-weight: bold;
@@ -1310,7 +1302,7 @@ My Code
   margin-top: 10px;
 }
 
-/* Previous & Next Buttons */
+/* Navigation Buttons */
 .prev-btn, .next-btn {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -1321,62 +1313,54 @@ My Code
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
 }
 
 .prev-btn {
-  left: -40px; /* Move buttons closer to the card */
+  left: -60px; /* Move closer to card */
 }
 
 .next-btn {
-  right: -40px; /* Move buttons closer to the card */
+  right: -60px; /* Move closer to card */
 }
 
 .prev-btn:hover, .next-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Media Queries */
+/* Responsive Adjustments */
 
-/* Desktop screens (> 900px) */
-@media (min-width: 901px) {
-  .review-carousel {
-    width: 80%;
-  }
+/* Desktop screens (>900px) */
+@media (min-width: 900px) {
   .review-card {
-    max-width: 400px;
+    max-width: 500px;
+  }
+  .prev-btn, .next-btn {
+    font-size: 24px;
+    left: -80px;
+    right: -80px;
   }
 }
 
 /* Tablet screens (768px - 900px) */
 @media (max-width: 900px) and (min-width: 768px) {
-  .review-carousel {
-    width: 90%;
-  }
   .review-card {
-    max-width: 350px;
-    padding: 20px;
+    max-width: 450px;
   }
   .prev-btn, .next-btn {
     font-size: 20px;
-    padding: 8px;
-    left: 10px;
-    right: 10px;
+    left: -40px;
+    right: -40px;
   }
 }
 
 /* Mobile screens (480px - 768px) */
 @media (max-width: 768px) and (min-width: 480px) {
-  .review-carousel {
-    width: 95%;
-  }
   .review-card {
-    max-width: 300px;
-    padding: 15px;
+    max-width: 90%;
+    padding: 20px;
   }
   .prev-btn, .next-btn {
     font-size: 18px;
-    padding: 8px;
     left: 5px;
     right: 5px;
   }
@@ -1384,24 +1368,16 @@ My Code
 
 /* Small mobile screens (up to 480px) */
 @media (max-width: 480px) {
-  .review-carousel {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
   .review-card {
     max-width: 90%;
-    padding: 10px;
+    padding: 15px;
   }
   .prev-btn, .next-btn {
     font-size: 16px;
-    padding: 6px;
-    left: 10px;
-    right: 10px;
+    left: 5px;
+    right: 5px;
   }
 }
-
-
 
 
 
