@@ -113,3 +113,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // =========================================================================================================================
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("feedback-form");
+  const nameInput = document.getElementById("feedback-name");
+  const emailInput = document.getElementById("feedback-email");
+  const messageInput = document.getElementById("feedback-message");
+  const thankYouMessage = document.getElementById("thank-you-message");
+
+  const nameError = document.getElementById("name-error");
+  const emailError = document.getElementById("email-error");
+  const messageError = document.getElementById("message-error");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    // Validate name
+    if (nameInput.value.trim() === "") {
+      nameError.style.display = "block";
+      valid = false;
+    } else {
+      nameError.style.display = "none";
+    }
+
+    // Validate email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+      emailError.style.display = "block";
+      valid = false;
+    } else {
+      emailError.style.display = "none";
+    }
+
+    // Validate message
+    if (messageInput.value.trim() === "") {
+      messageError.style.display = "block";
+      valid = false;
+    } else {
+      messageError.style.display = "none";
+    }
+
+    // If all fields are valid
+    if (valid) {
+      thankYouMessage.style.display = "block";
+      form.reset(); // Clear the form fields
+    }
+  });
+});
+
+
+
