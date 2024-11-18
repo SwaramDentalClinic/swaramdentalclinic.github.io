@@ -1409,6 +1409,140 @@ My Code
 
 
 
+
+
+  /**
+   * feedback section
+   */
+   .feedback-section {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f9ff;
+    padding: 20px;
+    margin: 50px 0; /* Space above and below the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .feedback-section .feedback-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .feedback-section .feedback-container h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-section .feedback-container .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .feedback-section .feedback-container input,
+  .feedback-section .feedback-container textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .feedback-section .feedback-container input:focus,
+  .feedback-section .feedback-container textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  }
+  
+  .feedback-section .feedback-container button {
+    background-color: #ffd700;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .feedback-section .feedback-container button:hover {
+    background-color: #f5c000;
+  }
+  
+  .feedback-section .feedback-container .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  
+  .feedback-section .feedback-container .thank-you {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .feedback-section .feedback-container .thank-you h2 {
+    color: #28a745;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .feedback-section .feedback-container {
+      padding: 20px 30px;
+    }
+    .feedback-section .feedback-container h1 {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .feedback-section {
+      padding: 15px;
+    }
+    .feedback-section .feedback-container {
+      padding: 15px 20px;
+    }
+    .feedback-section .feedback-container h1 {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feedback-section .feedback-container {
+      padding: 10px 15px;
+    }
+    .feedback-section .feedback-container h1 {
+      font-size: 18px;
+    }
+    .feedback-section .feedback-container input,
+    .feedback-section .feedback-container textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+    .feedback-section .feedback-container button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+
+
+
 /* ================================================================================================================================================== */
 
 /**
