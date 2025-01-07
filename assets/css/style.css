@@ -1401,6 +1401,177 @@ My Code
   }
 }
 
+.treatments-section {
+  padding: 40px 20px;
+  background-color: #f7f9fd;
+  margin-bottom: 40px; /* Add margin between sections */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Section Header Styling */
+.section-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px; /* Add spacing below header */
+  color: #2c3e50;
+}
+
+/* Accordion Container */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add enough gap between accordion items */
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Accordion Item Styling */
+.accordion-item {
+  width: 100%;
+  max-width: 700px; /* Ensure a maximum width */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space between individual accordion items */
+}
+
+/* Accordion Header Styling */
+.accordion-header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  text-align: left;
+  min-height: 50px;
+}
+
+.accordion-header:hover {
+  background-color: #4682b4;
+}
+
+/* Accordion Content Styling */
+.accordion-content {
+  padding: 15px 20px;
+  background-color: #f7f8fa;
+  display: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+.accordion-content h3 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #2c3e50;
+}
+
+.accordion-content i {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-top: 10px;
+}
+
+/* Arrow Rotation for Accordion */
+.arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    html {
+    font-size: 14px;
+  }
+  .treatments-section {
+    padding: 20px;
+    margin-bottom: 20px; /* Reduced margin between sections on mobile */
+  }
+
+  .section-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .accordion-header {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    min-height: 45px;
+  }
+
+  .accordion-content {
+    font-size: 0.95rem;
+  }
+
+  .accordion-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .accordion-header {
+    text-align: center;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .treatments-section {
+    padding: 30px;
+    margin-bottom: 30px; /* Adjusted margin for tablet size */
+  }
+
+  .section-header {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .accordion-header {
+    font-size: 1.15rem;
+    padding: 12px 18px;
+  }
+
+  .accordion-item {
+    width: 90%; /* Ensure accordion items have some padding on tablet */
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+  .treatments-section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .accordion-header {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    min-height: 50px;
+  }
+
+  .accordion-item {
+    width: 700px;
+    margin-bottom: 20px;
+  }
+}
 
 
 
@@ -1624,177 +1795,6 @@ My Code
 /* services details */
 
 /* General Section Styling */
-.treatments-section {
-  padding: 40px 20px;
-  background-color: #f7f9fd;
-  margin-bottom: 40px; /* Add margin between sections */
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Section Header Styling */
-.section-header {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px; /* Add spacing below header */
-  color: #2c3e50;
-}
-
-/* Accordion Container */
-.accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Add enough gap between accordion items */
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Accordion Item Styling */
-.accordion-item {
-  width: 100%;
-  max-width: 700px; /* Ensure a maximum width */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px; /* Space between individual accordion items */
-}
-
-/* Accordion Header Styling */
-.accordion-header {
-  background-color: #1e90ff;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  width: 100%;
-  transition: background-color 0.3s;
-  border-radius: 8px;
-  text-align: left;
-  min-height: 50px;
-}
-
-.accordion-header:hover {
-  background-color: #4682b4;
-}
-
-/* Accordion Content Styling */
-.accordion-content {
-  padding: 15px 20px;
-  background-color: #f7f8fa;
-  display: none;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: Arial, sans-serif;
-  width: 100%;
-}
-
-.accordion-content h3 {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  color: #2c3e50;
-}
-
-.accordion-content i {
-  font-size: 1.5rem;
-  color: #1e90ff;
-  margin-top: 10px;
-}
-
-/* Arrow Rotation for Accordion */
-.arrow {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.accordion-item.active .arrow {
-  transform: rotate(180deg);
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    html {
-    font-size: 14px;
-  }
-  .treatments-section {
-    padding: 20px;
-    margin-bottom: 20px; /* Reduced margin between sections on mobile */
-  }
-
-  .section-header {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .accordion-header {
-    font-size: 1.1rem;
-    padding: 10px 15px;
-    min-height: 45px;
-  }
-
-  .accordion-content {
-    font-size: 0.95rem;
-  }
-
-  .accordion-item {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .accordion-header {
-    text-align: center;
-  }
-}
-
-/* Tablet Responsiveness */
-@media (max-width: 1024px) {
-  .treatments-section {
-    padding: 30px;
-    margin-bottom: 30px; /* Adjusted margin for tablet size */
-  }
-
-  .section-header {
-    font-size: 1.75rem;
-    margin-bottom: 25px;
-  }
-
-  .accordion-header {
-    font-size: 1.15rem;
-    padding: 12px 18px;
-  }
-
-  .accordion-item {
-    width: 90%; /* Ensure accordion items have some padding on tablet */
-    margin-bottom: 20px;
-  }
-}
-
-/* Desktop View */
-@media (min-width: 1025px) {
-  .treatments-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
-  }
-
-  .section-header {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-
-  .accordion-header {
-    font-size: 1.2rem;
-    padding: 12px 20px;
-    min-height: 50px;
-  }
-
-  .accordion-item {
-    width: 700px;
-    margin-bottom: 20px;
-  }
-}
 
 
 
