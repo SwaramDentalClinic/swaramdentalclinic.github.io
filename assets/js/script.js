@@ -57,7 +57,37 @@ window.addEventListener('scroll', handleScroll);
 
 // =========================================================================================================================
 
+// JavaScript to manage accordion behavior
+document.addEventListener('DOMContentLoaded', function() {
+  const accordions = document.querySelectorAll('.accordion-header');
+  
+  accordions.forEach(accordion => {
+      accordion.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const arrow = this.querySelector('.arrow');
+          const isOpen = content.style.display === 'block';
+          
+          // Close all other open accordion items
+          document.querySelectorAll('.accordion-content').forEach(item => {
+              item.style.display = 'none';
+          });
+          document.querySelectorAll('.accordion-item').forEach(item => {
+              item.classList.remove('active');
+          });
 
+          // Toggle current clicked item
+          if (!isOpen) {
+              content.style.display = 'block';
+              this.parentElement.classList.add('active');
+              arrow.style.transform = 'rotate(180deg)';
+          } else {
+              content.style.display = 'none';
+              this.parentElement.classList.remove('active');
+              arrow.style.transform = 'rotate(0deg)';
+          }
+      });
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const reviews = document.querySelectorAll('.review-card');
