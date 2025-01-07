@@ -14,7 +14,7 @@ const addEventOnElem = function (elem, type, callback) {
 }
 
 /**
- * Navbar toggle
+ * Navbar toggle 
  */
 const navbar = document.querySelector("[data-navbar]");
 const navbarLinks = document.querySelectorAll("[data-nav-link]");
