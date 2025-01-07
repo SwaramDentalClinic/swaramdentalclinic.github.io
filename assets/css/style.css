@@ -1621,6 +1621,112 @@ My Code
   .cta-banner { margin-block-start: -120px; }
 
 
+/* services details */
+
+
+.treatments-section {
+  padding: 40px 20px;
+  background-color: #f7f9fd;
+}
+
+.section-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Center accordion items horizontally */
+}
+
+.accordion-item {
+  width: 90%; /* Limit the width to 90% of the container */
+  max-width: 600px; /* Set a maximum width to prevent stretching too wide */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.accordion-header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  text-align: left;
+  min-height: 50px;
+  line-height: 1.4;
+}
+
+.accordion-header:hover {
+  background-color: #4682b4;
+}
+
+.accordion-content {
+  padding: 15px 20px;
+  background-color: #f7f8fa;
+  display: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.accordion-content h3 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #2c3e50;
+}
+
+.accordion-content i {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  margin-top: 10px;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .treatments-section {
+      padding: 20px;
+  }
+
+  .section-header {
+      font-size: 1.5rem;
+  }
+
+  .accordion-header {
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      min-height: 45px;
+  }
+
+  .accordion-content {
+      font-size: 0.95rem;
+  }
+}
+
+
+
+/* services details end  */
 
 
 
