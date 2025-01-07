@@ -1623,12 +1623,14 @@ My Code
 
 /* services details */
 
-
+/* General Section Styling */
 .treatments-section {
   padding: 40px 20px;
   background-color: #f7f9fd;
+  margin-bottom: 40px; /* Added margin-bottom to provide spacing below each section */
 }
 
+/* Section Header Styling */
 .section-header {
   text-align: center;
   font-size: 2rem;
@@ -1636,20 +1638,24 @@ My Code
   color: #2c3e50;
 }
 
+/* Accordion Container */
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center; /* Center accordion items horizontally */
+  gap: 15px; /* Increased gap for spacing between accordion items */
+  align-items: center;
 }
 
+/* Accordion Item Styling */
 .accordion-item {
-  width: 90%; /* Limit the width to 90% of the container */
-  max-width: 600px; /* Set a maximum width to prevent stretching too wide */
+  width: 100%;
+  max-width: 700px; /* Increased the maximum width for large screens */
   border: 1px solid #ddd;
   border-radius: 5px;
+  margin-bottom: 20px; /* Spacing between individual accordion items */
 }
 
+/* Accordion Header Styling */
 .accordion-header {
   background-color: #1e90ff;
   color: white;
@@ -1672,6 +1678,7 @@ My Code
   background-color: #4682b4;
 }
 
+/* Accordion Content Styling */
 .accordion-content {
   padding: 15px 20px;
   background-color: #f7f8fa;
@@ -1679,7 +1686,6 @@ My Code
   font-size: 1rem;
   line-height: 1.6;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
 .accordion-content h3 {
@@ -1694,6 +1700,7 @@ My Code
   margin-top: 10px;
 }
 
+/* Arrow Rotation for Accordion */
 .arrow {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
@@ -1703,26 +1710,57 @@ My Code
   transform: rotate(180deg);
 }
 
-/* Mobile responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .treatments-section {
-      padding: 20px;
+    padding: 20px;
+    margin-bottom: 20px; /* Reduced margin between sections on small screens */
   }
 
   .section-header {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Reduced margin for smaller screens */
   }
 
   .accordion-header {
-      font-size: 1.1rem;
-      padding: 10px 15px;
-      min-height: 45px;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    min-height: 45px;
   }
 
   .accordion-content {
-      font-size: 0.95rem;
+    font-size: 0.95rem;
+  }
+
+  .accordion-item {
+    width: 100%;
+    margin-bottom: 15px; /* Reduced margin between accordion items on mobile */
   }
 }
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .treatments-section {
+    padding: 30px;
+    margin-bottom: 30px; /* Adjusted margin for tablet size */
+  }
+
+  .section-header {
+    font-size: 1.75rem; /* Medium-sized header for tablets */
+    margin-bottom: 25px;
+  }
+
+  .accordion-header {
+    font-size: 1.15rem;
+    padding: 12px 18px;
+  }
+
+  .accordion-item {
+    width: 90%; /* Ensure accordion items have some padding on tablet */
+    margin-bottom: 20px;
+  }
+}
+
 
 
 
