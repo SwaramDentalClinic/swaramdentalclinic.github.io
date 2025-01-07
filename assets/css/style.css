@@ -1716,6 +1716,9 @@ My Code
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    html {
+    font-size: 14px;
+  }
   .treatments-section {
     padding: 20px;
     margin-bottom: 20px; /* Reduced margin between sections on mobile */
