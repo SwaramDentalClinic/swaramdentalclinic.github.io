@@ -1627,14 +1627,16 @@ My Code
 .treatments-section {
   padding: 40px 20px;
   background-color: #f7f9fd;
-  margin-bottom: 40px; /* Added margin-bottom to provide spacing below each section */
+  margin-bottom: 40px; /* Add margin between sections */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Section Header Styling */
 .section-header {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* Add spacing below header */
   color: #2c3e50;
 }
 
@@ -1642,17 +1644,19 @@ My Code
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Increased gap for spacing between accordion items */
+  gap: 20px; /* Add enough gap between accordion items */
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Accordion Item Styling */
 .accordion-item {
   width: 100%;
-  max-width: 700px; /* Increased the maximum width for large screens */
+  max-width: 700px; /* Ensure a maximum width */
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 20px; /* Spacing between individual accordion items */
+  margin-bottom: 20px; /* Space between individual accordion items */
 }
 
 /* Accordion Header Styling */
@@ -1671,7 +1675,6 @@ My Code
   border-radius: 8px;
   text-align: left;
   min-height: 50px;
-  line-height: 1.4;
 }
 
 .accordion-header:hover {
@@ -1686,6 +1689,7 @@ My Code
   font-size: 1rem;
   line-height: 1.6;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
 
 .accordion-content h3 {
@@ -1714,12 +1718,12 @@ My Code
 @media (max-width: 768px) {
   .treatments-section {
     padding: 20px;
-    margin-bottom: 20px; /* Reduced margin between sections on small screens */
+    margin-bottom: 20px; /* Reduced margin between sections on mobile */
   }
 
   .section-header {
     font-size: 1.5rem;
-    margin-bottom: 20px; /* Reduced margin for smaller screens */
+    margin-bottom: 20px;
   }
 
   .accordion-header {
@@ -1734,7 +1738,11 @@ My Code
 
   .accordion-item {
     width: 100%;
-    margin-bottom: 15px; /* Reduced margin between accordion items on mobile */
+    margin-bottom: 15px;
+  }
+
+  .accordion-header {
+    text-align: center;
   }
 }
 
@@ -1746,7 +1754,7 @@ My Code
   }
 
   .section-header {
-    font-size: 1.75rem; /* Medium-sized header for tablets */
+    font-size: 1.75rem;
     margin-bottom: 25px;
   }
 
@@ -1757,6 +1765,30 @@ My Code
 
   .accordion-item {
     width: 90%; /* Ensure accordion items have some padding on tablet */
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+  .treatments-section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .accordion-header {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    min-height: 50px;
+  }
+
+  .accordion-item {
+    width: 700px;
     margin-bottom: 20px;
   }
 }
