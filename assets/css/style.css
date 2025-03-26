@@ -299,8 +299,18 @@ body {
 
 .navbar.active {
   visibility: visible;
-  max-height: 244px;
+  max-height: 80vh; /* Allows it to expand dynamically */
+  overflow-y: auto; /* Enables scrolling when needed */
   transition-duration: 0.5s;
+}
+
+.navbar.active::-webkit-scrollbar {
+  width: 5px; /* Slim scrollbar */
+}
+
+.navbar.active::-webkit-scrollbar-thumb {
+  background-color: #4285F4; /* Scrollbar color */
+  border-radius: 10px;
 }
 
 .navbar-list > li:not(:last-child) { border-block-end: 1px solid var(--gainsboro_50); }
