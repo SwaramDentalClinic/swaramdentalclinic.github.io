@@ -8,14 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
 './assets/images/gallery/Best Dentist Near Me In hinjewadi Pune Swaram Dental Clinic.jpg',
 './assets/images/gallery/Bad Breath Causes by best dentist in Maan Hinjewadi Mahalunge.jpeg',
 './assets/images/gallery/How_to_brush_your_teeth_by_Best_Dental_Clinic_in_hinjewadi_Swaram_dental_Clinic.jpg',
+'./assets/images/gallery/best dental clinic in hinjewadi pune swaram dental clinic.jpeg',      
 './assets/images/gallery/best dental clinic near godrej 24 Hinjewadi- Swaram Dental Clinic.jpg',
 './assets/images/gallery/best dental clinic near godrej element Hinjewadi- Swaram Dental Clinic.jpg',
 './assets/images/gallery/best dental clinic near me in Hinjewadi Swaram Dental Clinic.jpg',
-
+'./assets/images/gallery/best dentist in hinjewadi pune dr swati shivane.jpeg', 
 './assets/images/gallery/best dentist in hinjewadi pune swaram dental clinic.jpg',
 './assets/images/gallery/Best dentist near maan hinjewadi swaram dental clinic.jpg',
 './assets/images/gallery/best dentist near me in hinjewadi for root canal treatment.jpeg',
-
+'./assets/images/gallery/root canal specialist in hinjewadi pune dr swati shivane.jpeg',
 './assets/images/gallery/Best Teeth Cleaning and Polishing By Swaram Dental Clinic Hinjewadi Pune.jpg',
 
 './assets/images/gallery/Ceramic Bridge By Swaram Dental Clinic Maan Rd Hinjewadi Pune.jpg',
