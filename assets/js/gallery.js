@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const images = [
 
 
-
+'./assets/images/gallery/best dentist near me in hinjewadi dr swati shivane swaram dental clinic.jpeg',
 './assets/images/gallery/bestdentistinhinjewadimaanswaramdentalclinic.jpg',
 './assets/images/gallery/best dentist in hinjewadi phase 1 pune swaram dental clinic.jpg',
 './assets/images/gallery/Best Dentist Near Me In hinjewadi Pune Swaram Dental Clinic.jpg',
