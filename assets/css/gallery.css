@@ -1,134 +1,59 @@
-/* Gallery Section with Background */
-.gallery-section {
-    max-width: 1200px;
-    margin: 80px auto; /* Increased spacing above and below */
-    padding: 50px 20px; /* More padding for breathing space */
+.dental-gallery-section {
+    padding: 40px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #f0f4ff, #dce4f7); /* Light gradient effect */
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Styled "Gallery" Heading */
-.gallery-section h2 {
-    font-size: 40px;
-    font-weight: bold;
-    color: #222;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 40px; /* More spacing between heading and images */
-    position: relative;
-    display: inline-block;
-}
-
-/* Adding Underline Effect to Gallery Title */
-.gallery-section h2::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background-color: #4285F4;
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-
-/* Centered Grid Layout for Images */
-#gallery-grid {
+  }
+  .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px; /* Increased spacing between images */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
     justify-content: center;
-    padding: 0 30px; /* Better padding for alignment */
-}
-
-/* Image Thumbnails */
-.gallery-img {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .gallery-item img {
     width: 100%;
-    height: 220px; /* Slightly bigger thumbnails */
-    object-fit: cover; /* Cropped nicely */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-img:hover {
-    transform: scale(1.07);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Load More Button */
-#loadMoreBtn {
-    display: block;
-    margin: 40px auto; /* More space between images and button */
-    padding: 14px 28px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #4285F4;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-#loadMoreBtn:hover {
-    background-color: #357ae8;
-    transform: scale(1.05);
-}
-
-/* Lightbox Modal */
-#lightbox {
+    transition: transform 0.2s;
+  }
+  .gallery-item img:hover {
+    transform: scale(1.02);
+  }
+  .image-modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
+    padding-top: 80px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Lightbox Image */
-#lightbox img {
+    background: rgba(0,0,0,0.8);
+  }
+  .image-modal img {
+    margin: auto;
+    display: block;
     max-width: 90%;
-    max-height: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Lightbox Controls */
-#lightbox-controls {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.lightbox-btn {
-    background: white;
-    color: black;
-    border: none;
-    padding: 12px 18px;
+    max-height: 80vh;
+  }
+  .caption {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  .close, .prev-btn, .next-btn {
+    color: white;
+    position: absolute;
+    font-size: 30px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.lightbox-btn:hover {
-    background: lightgray;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    #gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
-    }
-}
+    user-select: none;
+    top: 10px;
+  }
+  .close { right: 20px; }
+  .prev-btn { left: 20px; top: 50%; transform: translateY(-50%); }
+  .next-btn { right: 20px; top: 50%; transform: translateY(-50%); }
+  
