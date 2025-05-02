@@ -2,6 +2,23 @@
     padding: 40px 20px;
     text-align: center;
   }
+
+  .gallery-title {
+    font-size: 4rem; /* Adjust size for balance */
+    margin-bottom: 4rem; /* Suitable spacing for a clean layout */
+    color: #005b8e; /* Calm, trust-building color, similar to dental blue */
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    font-weight: 700; /* Bold for impact */
+    text-align: center; /* Center alignment for emphasis */
+    line-height: 1.4; /* To give the title some breathing room */
+    
+    /* 3D effect and shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 
+                 0 0 25px rgba(0, 0, 0, 0.1), 
+                 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
