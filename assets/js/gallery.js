@@ -1,21 +1,21 @@
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const lazyImages = document.querySelectorAll(".lazy-img");
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove("lazy-img");
-          obs.unobserve(img);
-        }
-      });
-    }, {
-      rootMargin: "0px 0px 200px 0px",
-      threshold: 0.1
-    });
-    lazyImages.forEach(img => observer.observe(img));
-  });
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const lazyImages = document.querySelectorAll(".lazy-img");
+  //   const observer = new IntersectionObserver((entries, obs) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         const img = entry.target;
+  //         img.src = img.dataset.src;
+  //         img.classList.remove("lazy-img");
+  //         obs.unobserve(img);
+  //       }
+  //     });
+  //   }, {
+  //     rootMargin: "0px 0px 200px 0px",
+  //     threshold: 0.1
+  //   });
+  //   lazyImages.forEach(img => observer.observe(img));
+  // });
 
   // Modal image viewer
   const modal = document.getElementById("imageModal");
