@@ -1,5 +1,5 @@
 
-  // document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
   //   const lazyImages = document.querySelectorAll(".lazy-img");
   //   const observer = new IntersectionObserver((entries, obs) => {
   //     entries.forEach(entry => {
@@ -48,4 +48,4 @@
   window.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
   });
-
+ });
