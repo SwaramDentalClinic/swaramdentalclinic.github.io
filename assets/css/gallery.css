@@ -74,3 +74,32 @@
   .prev-btn { left: 20px; top: 50%; transform: translateY(-50%); }
   .next-btn { right: 20px; top: 50%; transform: translateY(-50%); }
   
+
+
+  .image-close,
+  .image-prev-btn,
+  .image-next-btn {
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    top: 10px;
+  }
+  
+  .image-close {
+    right: 20px;
+  }
+  
+  .image-prev-btn {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .image-next-btn {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
