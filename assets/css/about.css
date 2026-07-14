@@ -1,0 +1,811 @@
+/*
+ * SWARAM DENTAL CLINIC — About Page Styles
+ * Phase D: About & Dr. Swati Shivane
+ */
+
+/* ============================================================
+   PAGE HERO (inner pages)
+   ============================================================ */
+
+.page-hero {
+  background: var(--gradient-hero);
+  padding-block: clamp(4rem, 8vw, 7rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 80% 50%, hsla(196,70%,60%,0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.page-hero__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.page-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--clr-primary-200);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.page-hero__breadcrumb a {
+  color: var(--clr-primary-200);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.page-hero__breadcrumb a:hover { color: var(--clr-neutral-0); }
+
+.page-hero__breadcrumb svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.page-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-4);
+  background: hsla(0,0%,100%,0.10);
+  border: 1px solid hsla(0,0%,100%,0.18);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--clr-accent-200);
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-neutral-0);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__subtitle {
+  font-size: var(--fs-lg);
+  color: var(--clr-primary-100);
+  line-height: var(--lh-relaxed);
+  max-width: 60ch;
+}
+
+@media (max-width: 640px) {
+  .page-hero__container { padding-inline: var(--space-4); }
+}
+
+
+/* ============================================================
+   ABOUT INTRO — DOCTOR PROFILE
+   ============================================================ */
+
+.about-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.about-intro__image-wrap {
+  position: sticky;
+  top: 100px;
+}
+
+.about-intro__image {
+  width: 100%;
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-2xl);
+  display: block;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  max-height: none;
+}
+
+.about-intro__image-card {
+  margin-top: var(--space-5);
+  background: var(--gradient-brand);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  color: var(--clr-neutral-0);
+}
+
+.about-intro__image-card-name {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-0);
+  margin-bottom: var(--space-1);
+}
+
+.about-intro__image-card-deg {
+  font-size: var(--fs-sm);
+  color: var(--clr-primary-100);
+  margin-bottom: var(--space-4);
+  line-height: var(--lh-snug);
+}
+
+.about-intro__image-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.about-intro__stat {
+  background: hsla(0,0%,100%,0.12);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+}
+
+.about-intro__stat-num {
+  display: block;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-neutral-0);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.about-intro__stat-label {
+  font-size: var(--fs-xs);
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-medium);
+}
+
+/* Content column */
+.about-intro__content {}
+
+.about-intro__lead {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-800);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-5);
+  border-left: 3px solid var(--color-brand);
+}
+
+.about-intro__body {
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+.about-intro__body strong {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-semibold);
+}
+
+@media (max-width: 900px) {
+  .about-intro__grid { grid-template-columns: 1fr; }
+  .about-intro__image-wrap { position: static; }
+  .about-intro__image { max-height: 420px; }
+}
+
+
+/* ============================================================
+   CREDENTIALS SECTION
+   ============================================================ */
+
+.credentials { background: var(--clr-neutral-50); }
+
+.credentials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.credential-card {
+  background: var(--clr-neutral-0);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  overflow: hidden;
+  word-break: break-word;
+  min-width: 0;
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--clr-primary-100);
+}
+
+.credential-card__icon {
+  width: 52px;
+  height: 52px;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-neutral-0);
+  box-shadow: var(--shadow-brand);
+  flex-shrink: 0;
+}
+
+.credential-card__icon svg { width: 24px; height: 24px; }
+
+.credential-card__title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-900);
+  margin-bottom: var(--space-1);
+  line-height: var(--lh-snug);
+  word-break: break-word;
+}
+
+.credential-card__text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* inner div wrapping title + text inside card */
+.credential-card > div {
+  min-width: 0;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   EXPERTISE — WHAT DR. SWATI TREATS
+   ============================================================ */
+
+.expertise__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.expertise-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--clr-neutral-0);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-soft);
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-xs);
+}
+
+.expertise-item:hover {
+  border-color: var(--clr-primary-200);
+  background: var(--clr-primary-50);
+  transform: translateX(4px);
+}
+
+.expertise-item__dot {
+  width: 10px;
+  height: 10px;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.expertise-item__text {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-800);
+}
+
+
+/* ============================================================
+   PHILOSOPHY SECTION
+   ============================================================ */
+
+.philosophy { background: var(--clr-neutral-50); }
+
+.philosophy__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.philosophy__quote {
+  position: relative;
+  padding: var(--space-10) var(--space-8);
+  background: var(--gradient-hero);
+  border-radius: var(--radius-3xl);
+  color: var(--clr-neutral-0);
+  overflow: hidden;
+}
+
+.philosophy__quote::before {
+  content: '"';
+  position: absolute;
+  top: -var(--space-4);
+  left: var(--space-6);
+  font-size: 10rem;
+  line-height: 1;
+  color: hsla(0,0%,100%,0.08);
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+
+.philosophy__quote-text {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-relaxed);
+  color: var(--clr-neutral-0);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin-bottom: var(--space-6);
+}
+
+.philosophy__quote-author {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary-200);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.philosophy__quote-author::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--clr-accent-300);
+  flex-shrink: 0;
+}
+
+.philosophy__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.philosophy__point {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--clr-neutral-0);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-soft);
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-xs);
+}
+
+.philosophy__point:hover {
+  border-color: var(--clr-primary-100);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.philosophy__point-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--color-brand-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand);
+  flex-shrink: 0;
+  transition: var(--transition-base);
+}
+
+.philosophy__point:hover .philosophy__point-icon {
+  background: var(--gradient-brand);
+  color: var(--clr-neutral-0);
+  box-shadow: var(--shadow-brand);
+}
+
+.philosophy__point-icon svg { width: 20px; height: 20px; }
+
+.philosophy__point-title {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-900);
+  margin-bottom: var(--space-1);
+}
+
+.philosophy__point-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+@media (max-width: 900px) {
+  .philosophy__grid { grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
+   CLINIC — ABOUT THE PRACTICE
+   ============================================================ */
+
+.clinic-about__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.clinic-about__image {
+  width: 100%;
+  border-radius: var(--radius-3xl);
+  box-shadow: var(--shadow-2xl);
+  object-fit: contain;
+  aspect-ratio: auto;
+  height: auto;
+  display: block;
+}
+
+.clinic-about__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.clinic-about__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.clinic-about__feature-check {
+  width: 22px;
+  height: 22px;
+  background: var(--clr-success-light);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.clinic-about__feature-check svg {
+  width: 12px;
+  height: 12px;
+  color: var(--clr-success);
+}
+
+.clinic-about__feature-text {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+  line-height: var(--lh-relaxed);
+}
+
+.clinic-about__feature-text strong {
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-semibold);
+}
+
+@media (max-width: 900px) {
+  .clinic-about__grid { grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
+   REVIEWS ON ABOUT PAGE
+   ============================================================ */
+
+.about-reviews { background: var(--clr-neutral-50); }
+
+.about-reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+/* Reusable CTA row below grids */
+.section-cta-row {
+  text-align: center;
+  margin-top: var(--space-10);
+}
+
+
+/* ============================================================
+   APPOINTMENT CTA STRIP
+   ============================================================ */
+
+.about-cta {
+  background: var(--gradient-brand);
+  padding-block: var(--space-16);
+  text-align: center;
+}
+
+.about-cta__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-4);
+  background: hsla(0,0%,100%,0.12);
+  border: 1px solid hsla(0,0%,100%,0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--clr-accent-200);
+  margin-bottom: var(--space-5);
+}
+
+.about-cta__title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-neutral-0);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--space-4);
+}
+
+.about-cta__sub {
+  font-size: var(--fs-lg);
+  color: var(--clr-primary-100);
+  line-height: var(--lh-relaxed);
+  max-width: 52ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-10);
+}
+
+.about-cta__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* ============================================================
+   FAQ — shared across all pages
+   ============================================================ */
+
+.faq-section { background: var(--clr-neutral-0); }
+
+.faq__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.faq__item {
+  border: 1.5px solid var(--color-border-soft);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
+}
+
+.faq__item.is-open {
+  border-color: var(--clr-primary-200);
+  box-shadow: var(--shadow-md);
+}
+
+.faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-out);
+}
+
+.faq__trigger:hover { background: var(--clr-neutral-50); }
+.faq__item.is-open .faq__trigger { background: var(--clr-primary-50); }
+
+.faq__question {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-900);
+  line-height: var(--lh-snug);
+}
+
+.faq__item.is-open .faq__question { color: var(--color-brand); }
+
+.faq__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-base);
+  color: var(--clr-neutral-500);
+}
+
+.faq__item.is-open .faq__icon {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--clr-neutral-0);
+  transform: rotate(45deg);
+}
+
+.faq__icon svg { width: 14px; height: 14px; }
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--duration-slow) var(--ease-out);
+}
+
+.faq__answer-inner {
+  padding: 0 var(--space-6) var(--space-5);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-muted);
+}
+
+.faq__cta-card {
+  background: var(--gradient-brand);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  color: var(--clr-neutral-0);
+  text-align: center;
+  position: sticky;
+  top: 100px;
+}
+
+.faq__cta-card h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-0);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--ls-tight);
+}
+
+.faq__cta-card p {
+  font-size: var(--fs-sm);
+  color: var(--clr-primary-100);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.faq__cta-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: hsla(0,0%,100%,0.15);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-4);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-0);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.faq__cta-phone:hover { background: hsla(0,0%,100%,0.22); }
+.faq__cta-phone svg { width: 20px; height: 20px; }
+
+@media (max-width: 900px) {
+  .faq__grid { grid-template-columns: 1fr; }
+  .faq__cta-card { position: static; }
+}
+
+
+/* ============================================================
+   APPOINTMENT SECTION — shared across all pages
+   ============================================================ */
+
+.appointment-section {
+  background: var(--gradient-brand-light);
+  border-top: 1px solid var(--clr-primary-100);
+  border-bottom: 1px solid var(--clr-primary-100);
+}
+
+
+/* ============================================================
+   AREAS SERVED — shared across all pages
+   ============================================================ */
+
+.areas-section {
+  background: var(--clr-primary-900);
+  padding-block: var(--space-16);
+}
+
+.areas-section .section-tag  { background: hsla(0,0%,100%,0.10); color: var(--clr-primary-100); }
+.areas-section .section-tag::before { background: var(--clr-accent-300); }
+.areas-section .section-title    { color: var(--clr-neutral-0); }
+.areas-section .section-subtitle { color: var(--clr-primary-200); }
+
+.areas__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+.areas__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  background: hsla(0,0%,100%,0.08);
+  border: 1px solid hsla(0,0%,100%,0.12);
+  border-radius: var(--radius-full);
+  color: var(--clr-primary-100);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition: var(--transition-base);
+  text-decoration: none;
+}
+
+.areas__chip::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--clr-accent-300);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.areas__chip:hover {
+  background: hsla(0,0%,100%,0.14);
+  color: var(--clr-neutral-0);
+  transform: translateY(-2px);
+}
+
+.areas__seo-text {
+  text-align: center;
+  margin-top: var(--space-12);
+  padding: var(--space-8);
+  background: hsla(0,0%,100%,0.04);
+  border-radius: var(--radius-2xl);
+  border: 1px solid hsla(0,0%,100%,0.08);
+}
+
+.areas__seo-text h2 {
+  font-size: var(--fs-h3);
+  color: var(--clr-neutral-0);
+  margin-bottom: var(--space-4);
+  font-weight: var(--fw-bold);
+}
+
+.areas__seo-text p {
+  font-size: var(--fs-sm);
+  color: var(--clr-primary-200);
+  line-height: var(--lh-loose);
+  max-width: 80ch;
+  margin-inline: auto;
+}

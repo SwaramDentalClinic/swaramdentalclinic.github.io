@@ -1,0 +1,325 @@
+/*
+ * SWARAM DENTAL CLINIC — Treatments Page Styles
+ * Phase E: Treatment Framework
+ */
+
+
+/* ============================================================
+   TREATMENT CATEGORY NAV (sticky anchor nav)
+   ============================================================ */
+
+.treatment-nav {
+  background: var(--clr-neutral-0);
+  border-bottom: 1px solid var(--color-border-soft);
+  position: sticky;
+  top: 76px; /* height of site-header */
+  z-index: var(--z-dropdown);
+  box-shadow: var(--shadow-sm);
+}
+
+.treatment-nav__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-block: var(--space-3);
+}
+
+.treatment-nav__inner::-webkit-scrollbar { display: none; }
+
+.treatment-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-600);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition-color);
+  border: 1.5px solid transparent;
+}
+
+.treatment-nav__link:hover {
+  color: var(--color-brand);
+  background: var(--clr-primary-50);
+  border-color: var(--clr-primary-100);
+}
+
+.treatment-nav__link.active {
+  color: var(--color-brand);
+  background: var(--color-brand-light);
+  border-color: var(--clr-primary-200);
+}
+
+@media (max-width: 768px) {
+  .treatment-nav { top: 64px; }
+  .treatment-nav__inner { padding-inline: var(--space-4); }
+}
+
+
+/* ============================================================
+   TREATMENT CATEGORY SECTION
+   ============================================================ */
+
+.treatment-category {
+  padding-block: var(--section-py);
+  scroll-margin-top: 130px; /* sticky header + nav */
+}
+
+.treatment-category:nth-child(even) {
+  background: var(--clr-neutral-50);
+}
+
+.treatment-category__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+}
+
+.treatment-category__icon {
+  width: 64px;
+  height: 64px;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-neutral-0);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-brand);
+}
+
+.treatment-category__icon svg { width: 30px; height: 30px; }
+
+.treatment-category__title-wrap {}
+
+.treatment-category__title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-900);
+  letter-spacing: var(--ls-tight);
+  margin-bottom: var(--space-2);
+}
+
+.treatment-category__desc {
+  font-size: var(--fs-base);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  max-width: 72ch;
+}
+
+.treatment-category__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+
+/* ============================================================
+   TREATMENT CARD
+   ============================================================ */
+
+.treatment-card {
+  background: var(--clr-neutral-0);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border-soft);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.treatment-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.treatment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--clr-primary-100);
+}
+
+.treatment-card:hover::after { transform: scaleX(1); }
+
+.treatment-card__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-brand-light);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand);
+  flex-shrink: 0;
+  transition: var(--transition-base);
+}
+
+.treatment-card__icon svg { width: 22px; height: 22px; }
+
+.treatment-card:hover .treatment-card__icon {
+  background: var(--gradient-brand);
+  color: var(--clr-neutral-0);
+  box-shadow: var(--shadow-brand);
+}
+
+.treatment-card__name {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-900);
+  line-height: var(--lh-snug);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.treatment-card:hover .treatment-card__name { color: var(--color-brand); }
+
+.treatment-card__desc {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+  flex: 1;
+}
+
+.treatment-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-brand);
+  margin-top: var(--space-2);
+  transition: gap var(--duration-fast) var(--ease-out);
+}
+
+.treatment-card:hover .treatment-card__link { gap: var(--space-3); }
+.treatment-card__link svg { width: 14px; height: 14px; }
+
+/* Popular badge */
+.treatment-card__badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--clr-accent-100);
+  color: var(--clr-accent-600);
+}
+
+
+/* ============================================================
+   TREATMENT STATS BAR
+   ============================================================ */
+
+.treatment-stats {
+  background: var(--gradient-brand);
+  padding-block: var(--space-10);
+}
+
+.treatment-stats .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .treatment-stats .container { grid-template-columns: repeat(2, 1fr); }
+}
+
+.treatment-stat__number {
+  display: block;
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-neutral-0);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.treatment-stat__label {
+  font-size: var(--fs-sm);
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-medium);
+}
+
+
+/* ============================================================
+   WHY CHOOSE US STRIP (treatments page)
+   ============================================================ */
+
+.treatment-why {
+  background: var(--clr-neutral-50);
+  padding-block: var(--section-py);
+}
+
+.treatment-why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-5);
+}
+
+.treatment-why__item {
+  background: var(--clr-neutral-0);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-xs);
+}
+
+.treatment-why__item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-primary-100);
+}
+
+.treatment-why__icon {
+  width: 44px; height: 44px;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--clr-neutral-0);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-brand);
+}
+
+.treatment-why__icon svg { width: 20px; height: 20px; }
+
+.treatment-why__title {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-neutral-900);
+  margin-bottom: var(--space-1);
+}
+
+.treatment-why__text {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  line-height: var(--lh-relaxed);
+}
